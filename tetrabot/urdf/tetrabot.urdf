@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="tetrabot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="9.64434816243531E-05 -4.79855861341277E-06 2.45269715507795E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0265364970053473" />
+      <inertia
+        ixx="3.0536565659628E-05"
+        ixy="-3.65647208623936E-08"
+        ixz="4.04204308041377E-08"
+        iyy="3.05008216737223E-05"
+        iyz="-3.22936592969521E-08"
+        izz="3.04953905866067E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.992156862745098 0.882352941176471 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="leg3_joint0">
+    <inertial>
+      <origin
+        xyz="-0.00916149936539492 0.0110886942319374 -0.0277523891120397"
+        rpy="0 0 0" />
+      <mass
+        value="0.0791390352854354" />
+      <inertia
+        ixx="2.61621714343296E-05"
+        ixy="7.4001374694877E-07"
+        ixz="2.70675767409261E-07"
+        iyy="2.19292644113529E-05"
+        iyz="1.50310806069393E-06"
+        izz="1.98450891734132E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg3_joint0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg3_joint0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg3_joint0"
+    type="revolute">
+    <origin
+      xyz="0.0122646699063804 -0.0372959348191384 -0.0138807820472492"
+      rpy="1.19587661224503 0.426897238458345 -2.98540748999336" />
+    <parent
+      link="base_link" />
+    <child
+      link="leg3_joint0" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg3_joint1">
+    <inertial>
+      <origin
+        xyz="0.000179531302578924 -0.0307273505796145 -0.0186672343382289"
+        rpy="0 0 0" />
+      <mass
+        value="0.0141701030409731" />
+      <inertia
+        ixx="1.24772926185894E-05"
+        ixy="2.43985274319853E-08"
+        ixz="2.5410988417629E-21"
+        iyy="8.23467130946867E-06"
+        iyz="0"
+        izz="5.66152833361988E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg3_joint1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.917647058823529 0.917647058823529 0.917647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg3_joint1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg3_joint1"
+    type="revolute">
+    <origin
+      xyz="-0.020335 0.030074 -0.048834"
+      rpy="1.5708 0 -3.1416" />
+    <parent
+      link="leg3_joint0" />
+    <child
+      link="leg3_joint1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg3_joint2">
+    <inertial>
+      <origin
+        xyz="-0.00926210717564058 0.0112104669021427 -0.0280957843605759"
+        rpy="0 0 0" />
+      <mass
+        value="0.0782794014148115" />
+      <inertia
+        ixx="2.61393136941278E-05"
+        ixy="7.40013104335533E-07"
+        ixz="2.70676690473466E-07"
+        iyy="2.19064070071649E-05"
+        iyz="1.50310871201458E-06"
+        izz="1.98015202772842E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg3_joint2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg3_joint2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg3_joint2"
+    type="revolute">
+    <origin
+      xyz="0.00034176 -0.058899 -0.0201"
+      rpy="1.5708 0.042272 -3.1358" />
+    <parent
+      link="leg3_joint1" />
+    <child
+      link="leg3_joint2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg3_joint3">
+    <inertial>
+      <origin
+        xyz="0.000214978774742178 -0.0368686415677862 -0.0188840811533723"
+        rpy="0 0 0" />
+      <mass
+        value="0.0166971974463354" />
+      <inertia
+        ixx="1.31643089587802E-05"
+        ixy="2.79049886711712E-08"
+        ixz="-1.90582413132218E-21"
+        iyy="8.31740305434358E-06"
+        iyz="2.11758236813575E-22"
+        izz="6.34856501994648E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg3_joint3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.917647058823529 0.917647058823529 0.917647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg3_joint3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg3_joint3"
+    type="revolute">
+    <origin
+      xyz="-0.020335 0.030074 -0.048834"
+      rpy="1.5708 0 -3.1416" />
+    <parent
+      link="leg3_joint2" />
+    <child
+      link="leg3_joint3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg4_joint0">
+    <inertial>
+      <origin
+        xyz="-0.00916148212867609 0.0110887019949551 -0.0277524071142914"
+        rpy="0 0 0" />
+      <mass
+        value="0.079139102742506" />
+      <inertia
+        ixx="2.61621861686979E-05"
+        ixy="7.40005013486593E-07"
+        ixz="2.70693857046353E-07"
+        iyy="2.19293080141942E-05"
+        iyz="1.50311196526989E-06"
+        izz="1.98450923475495E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg4_joint0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg4_joint0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg4_joint0"
+    type="revolute">
+    <origin
+      xyz="0 0 0.041642"
+      rpy="-3.1416 0 0.13007" />
+    <parent
+      link="base_link" />
+    <child
+      link="leg4_joint0" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg4_joint1">
+    <inertial>
+      <origin
+        xyz="0.000179531302578938 -0.0307273505796145 -0.0186672343382289"
+        rpy="0 0 0" />
+      <mass
+        value="0.0141701030409731" />
+      <inertia
+        ixx="1.24772926185894E-05"
+        ixy="2.43985274319805E-08"
+        ixz="2.75285707857648E-21"
+        iyy="8.23467130946867E-06"
+        iyz="2.91167575618666E-21"
+        izz="5.66152833361989E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg4_joint1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg4_joint1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg4_joint1"
+    type="revolute">
+    <origin
+      xyz="-0.020335400416483 0.030073864314911 -0.0488338729858982"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="leg4_joint0" />
+    <child
+      link="leg4_joint1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg4_joint2">
+    <inertial>
+      <origin
+        xyz="-0.00926208982166998 0.01121047385191 -0.0280958019100969"
+        rpy="0 0 0" />
+      <mass
+        value="0.0782794676982518" />
+      <inertia
+        ixx="2.6139327203401E-05"
+        ixy="7.40005201198541E-07"
+        ixz="2.70694462244788E-07"
+        iyy="2.19064494615639E-05"
+        iyz="1.50311178030552E-06"
+        izz="1.98015232046659E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg4_joint2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg4_joint2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg4_joint2"
+    type="revolute">
+    <origin
+      xyz="0.000341759724446909 -0.058899008483087 -0.0201"
+      rpy="1.5707963267949 0.0422722148042326 -3.13579024879902" />
+    <parent
+      link="leg4_joint1" />
+    <child
+      link="leg4_joint2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg4_joint3">
+    <inertial>
+      <origin
+        xyz="0.000214978774742199 -0.0368686415677862 -0.0188840811533722"
+        rpy="0 0 0" />
+      <mass
+        value="0.0166971974463354" />
+      <inertia
+        ixx="1.31643089587802E-05"
+        ixy="2.7904988671171E-08"
+        ixz="2.75285707857648E-21"
+        iyy="8.31740305434359E-06"
+        iyz="3.46754112782229E-21"
+        izz="6.34856501994647E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg4_joint3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg4_joint3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg4_joint3"
+    type="revolute">
+    <origin
+      xyz="-0.0203354004164829 0.030073864314911 -0.0488338729858982"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="leg4_joint2" />
+    <child
+      link="leg4_joint3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg2_joint0">
+    <inertial>
+      <origin
+        xyz="-0.00916147923912866 0.0110886962963217 -0.0277524128093545"
+        rpy="0 0 0" />
+      <mass
+        value="0.0791391343950906" />
+      <inertia
+        ixx="2.61622323497876E-05"
+        ixy="7.40007714111858E-07"
+        ixz="2.70707221481747E-07"
+        iyy="2.19293433392343E-05"
+        iyz="1.50311468036353E-06"
+        izz="1.98451131673556E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg2_joint0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg2_joint0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg2_joint0"
+    type="revolute">
+    <origin
+      xyz="-0.038432 0.0080265 -0.013881"
+      rpy="-1.1439 -0.6349 -2.0402" />
+    <parent
+      link="base_link" />
+    <child
+      link="leg2_joint0" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg2_joint1">
+    <inertial>
+      <origin
+        xyz="0.000179531302578931 -0.0307273505796145 -0.018667234338229"
+        rpy="0 0 0" />
+      <mass
+        value="0.0141701030409731" />
+      <inertia
+        ixx="1.24772926185894E-05"
+        ixy="2.43985274319866E-08"
+        ixz="-1.48230765769503E-21"
+        iyy="8.23467130946867E-06"
+        iyz="-2.5410988417629E-21"
+        izz="5.66152833361988E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg2_joint1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.917647058823529 0.917647058823529 0.917647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg2_joint1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg2_joint1"
+    type="revolute">
+    <origin
+      xyz="-0.0203354004164829 0.030073864314911 -0.0488338729858981"
+      rpy="1.5707963267949 0 -3.14159265358979" />
+    <parent
+      link="leg2_joint0" />
+    <child
+      link="leg2_joint1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg2_joint2">
+    <inertial>
+      <origin
+        xyz="-0.00926208833406308 0.0112104678560717 -0.0280958061489788"
+        rpy="0 0 0" />
+      <mass
+        value="0.0782794936103767" />
+      <inertia
+        ixx="2.61393711209684E-05"
+        ixy="7.40008227724327E-07"
+        ixz="2.70706005587354E-07"
+        iyy="2.190648060257E-05"
+        iyz="1.50311438095934E-06"
+        izz="1.98015429101262E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg2_joint2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg2_joint2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg2_joint2"
+    type="revolute">
+    <origin
+      xyz="0.000341759724446927 -0.058899008483087 -0.0201"
+      rpy="1.5707963267949 0.0422722148042331 -3.13579024879902" />
+    <parent
+      link="leg2_joint1" />
+    <child
+      link="leg2_joint2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg2_joint3">
+    <inertial>
+      <origin
+        xyz="0.00021497877474215 -0.0368686415677862 -0.0188840811533723"
+        rpy="0 0 0" />
+      <mass
+        value="0.0166971974463354" />
+      <inertia
+        ixx="1.31643089587802E-05"
+        ixy="2.79049886711691E-08"
+        ixz="1.05879118406788E-21"
+        iyy="8.31740305434357E-06"
+        iyz="3.59989002583078E-21"
+        izz="6.34856501994649E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg2_joint3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.917647058823529 0.917647058823529 0.917647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg2_joint3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg2_joint3"
+    type="revolute">
+    <origin
+      xyz="-0.0203354004164829 0.030073864314911 -0.0488338729858981"
+      rpy="1.5707963267949 0 -3.14159265358979" />
+    <parent
+      link="leg2_joint2" />
+    <child
+      link="leg2_joint3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg1_joint0">
+    <inertial>
+      <origin
+        xyz="-0.00916148598046012 0.0110887080193846 -0.027752404510583"
+        rpy="0 0 0" />
+      <mass
+        value="0.0791390925701712" />
+      <inertia
+        ixx="2.61621942874453E-05"
+        ixy="7.39998566076172E-07"
+        ixz="2.7069208935904E-07"
+        iyy="2.19293061147975E-05"
+        iyz="1.50311928882464E-06"
+        izz="1.98450947266466E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg1_joint0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg1_joint0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg1_joint0"
+    type="revolute">
+    <origin
+      xyz="0.0261668920580726 0.0292694831175248 -0.0138807820472492"
+      rpy="-1.22757384079111 -0.137799875702434 2.36305285156344" />
+    <parent
+      link="base_link" />
+    <child
+      link="leg1_joint0" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg1_joint1">
+    <inertial>
+      <origin
+        xyz="0.000179531302578931 -0.0307273505796145 -0.0186672343382289"
+        rpy="0 0 0" />
+      <mass
+        value="0.0141701030409731" />
+      <inertia
+        ixx="1.24772926185894E-05"
+        ixy="2.4398527431985E-08"
+        ixz="-2.40213249885399E-21"
+        iyy="8.23467130946867E-06"
+        iyz="7.94093388050907E-21"
+        izz="5.66152833361988E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg1_joint1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.917647058823529 0.917647058823529 0.917647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg1_joint1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg1_joint1"
+    type="revolute">
+    <origin
+      xyz="-0.0203354004164829 0.030073864314911 -0.0488338729858982"
+      rpy="1.5707963267949 0 -3.14159265358979" />
+    <parent
+      link="leg1_joint0" />
+    <child
+      link="leg1_joint1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg1_joint2">
+    <inertial>
+      <origin
+        xyz="-0.00926209277260614 0.0112104820730662 -0.0280958002943798"
+        rpy="0 0 0" />
+      <mass
+        value="0.0782794611292867" />
+      <inertia
+        ixx="2.61393364615734E-05"
+        ixy="7.39996458273451E-07"
+        ixz="2.70693820921705E-07"
+        iyy="2.19064503407389E-05"
+        iyz="1.50312077600216E-06"
+        izz="1.98015255872019E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg1_joint2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg1_joint2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg1_joint2"
+    type="revolute">
+    <origin
+      xyz="0.000341759724446923 -0.058899008483087 -0.0201"
+      rpy="1.5707963267949 0.0422722148042329 -3.13579024879902" />
+    <parent
+      link="leg1_joint1" />
+    <child
+      link="leg1_joint2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg1_joint3">
+    <inertial>
+      <origin
+        xyz="0.000214978774742136 -0.0368686415677862 -0.0188840811533723"
+        rpy="0 0 0" />
+      <mass
+        value="0.0166971974463354" />
+      <inertia
+        ixx="1.31643089587802E-05"
+        ixy="2.79049886711705E-08"
+        ixz="2.36904527435187E-21"
+        iyy="8.31740305434358E-06"
+        iyz="4.34104385467829E-21"
+        izz="6.34856501994649E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg1_joint3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.917647058823529 0.917647058823529 0.917647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tetrabot/meshes/leg1_joint3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg1_joint3"
+    type="revolute">
+    <origin
+      xyz="-0.0203354004164829 0.030073864314911 -0.0488338729858982"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="leg1_joint2" />
+    <child
+      link="leg1_joint3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
