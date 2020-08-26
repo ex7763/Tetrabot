@@ -34,10 +34,16 @@ for joint_number in range(number_of_joints):
     print(info)
     print(info[0], ": ", name)
     joint_dict[name] = info[0]
-    debug_param_list.append(p.addUserDebugParameter(name, -90, 90, 0))
+    #debug_param_list.append(p.addUserDebugParameter(name, -90, 90, 0))
+    debug_param_list.append(p.addUserDebugParameter(name, -1.57, 1.57, 0))
+    #debug_param_list.append(p.addUserDebugParameter(name, -3, 3, 0))
 
     p.changeDynamics(robot, info[0],
-                     lateralFriction = 200000,
+                     lateralFriction = 1,
+                     #rollingFriction = 0.1,
+                     contactDamping = 100,
+                     contactStiffness = 1000000,
+                     frictionAnchor = 100
                      )
     #print(info)
 
@@ -54,7 +60,7 @@ def resetRobot():
 
 
 p.changeDynamics(plane, -1,
-                 lateralFriction = 10000000,
+                 lateralFriction = 3,
                  )
 
 class tetra(gym.Env):
@@ -77,8 +83,10 @@ class tetra(gym.Env):
             value = action[joint_id]
             p.setJointMotorControl2(robot,
                                 joint_dict[key],
-                                p.POSITION_CONTROL,
-                                targetVelocity=value)
+                                #p.POSITION_CONTROL,
+                                controlMode=p.PD_CONTROL,
+                                targetVelocity=value,
+                            )
 
     def test(self):
         while True:
@@ -89,26 +97,31 @@ class tetra(gym.Env):
                 value = p.readUserDebugParameter(debug_param_list[joint_dict[key]])
                 p.setJointMotorControl2(robot,
                                     joint_dict[key],
-                                   # p.VELOCITY_CONTROL,
-                                    p.POSITION_CONTROL,
-                                    targetVelocity=value)
+                                    controlMode=p.POSITION_CONTROL,
+                                    targetPosition=value,
+                                    targetVelocity=-0,
+                                    force = 10
+                                   )
             p.stepSimulation()
+            time.sleep(0.005)
 
 
 
 if __name__ == '__main__':
-    while True:
-        time.sleep(0.01)
-        p.stepSimulation()
+
     env = tetra()
     env.reset()
+    
+
+    env.test()
+
+
     action = np.ones([16]) * 0.3
     while(True):
         env.step(action)
         p.stepSimulation()
         time.sleep(0.01)
 
-#env.test()
 
 
 ## Referene: https://www.programcreek.com/python/?code=Healthcare-Robotics%2Fassistive-gym%2Fassistive-gym-master%2Fassistive_gym%2Fenvs%2Fworld_creation.py
