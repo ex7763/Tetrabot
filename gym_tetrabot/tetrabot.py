@@ -11,10 +11,13 @@ client = p.connect(p.GUI)
 p.setGravity(0, 0, -9.8, physicsClientId=client)
 
 p.setAdditionalSearchPath(pybullet_data.getDataPath())
-plane = p.loadURDF("plane.urdf")
+plane = p.loadURDF("plane.urdf",
+                   flags=p.URDF_USE_SELF_COLLISION)
 
 path = os.path.dirname(__file__)
-robot = p.loadURDF( path + "/../tetrabot/urdf/tetrabot.urdf", basePosition=[0,0,0.2])
+robot = p.loadURDF( path + "/../tetrabot/urdf/tetrabot.urdf",
+                   basePosition=[0,0,0.2],
+                   flags=p.URDF_USE_SELF_COLLISION)
 pos, orient = p.getBasePositionAndOrientation(robot)
 
 
@@ -33,10 +36,8 @@ for joint_number in range(number_of_joints):
     joint_dict[name] = info[0]
     debug_param_list.append(p.addUserDebugParameter(name, -90, 90, 0))
 
-    p.changeDynamics(info[0], -1,
-                     lateralFriction = 2,
-                     #spiningFriction = 10,
-                     anisotropicFriction = 100,
+    p.changeDynamics(robot, info[0],
+                     lateralFriction = 200000,
                      )
     #print(info)
 
@@ -53,13 +54,11 @@ def resetRobot():
 
 
 p.changeDynamics(plane, -1,
-                 lateralFriction = 100,
-                 #rollingFriction = 100,
-                 anisotropicFriction = 100)
+                 lateralFriction = 10000000,
+                 )
 
 class tetra(gym.Env):
     def __init__(self):
-
         action_low = - np.ones([16], dtype=np.float32)
         action_high = np.ones([16], dtype=np.float32)
 
@@ -97,13 +96,18 @@ class tetra(gym.Env):
 
 
 
-env = tetra()
-env.reset()
-action = np.ones([16]) * 0.3
-while(True):
-    env.step(action)
-    p.stepSimulation()
-    time.sleep(0.01)
+if __name__ == '__main__':
+    while True:
+        time.sleep(0.01)
+        p.stepSimulation()
+    env = tetra()
+    env.reset()
+    action = np.ones([16]) * 0.3
+    while(True):
+        env.step(action)
+        p.stepSimulation()
+        time.sleep(0.01)
+
 #env.test()
 
 

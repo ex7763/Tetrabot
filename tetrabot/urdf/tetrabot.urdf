@@ -42,6 +42,10 @@
         <mesh
           filename="package://tetrabot/meshes/base_link.STL" />
       </geometry>
+      <lateral_friction value="1000.0"/>
+      <rolling_friction value="0.0"/>
+      <stiffness value="30000"/>
+      <damping value="1000"/>
     </collision>
   </link>
   <link
@@ -140,6 +144,10 @@
         <mesh
           filename="package://tetrabot/meshes/leg3_joint1.STL" />
       </geometry>
+      <lateral_friction value="1000.0"/>
+      <rolling_friction value="0.0"/>
+      <stiffness value="30000"/>
+      <damping value="1000"/>
     </collision>
   </link>
   <joint
@@ -198,6 +206,10 @@
         <mesh
           filename="package://tetrabot/meshes/leg3_joint2.STL" />
       </geometry>
+      <lateral_friction value="1000.0"/>
+      <rolling_friction value="0.0"/>
+      <stiffness value="30000"/>
+      <damping value="1000"/>
     </collision>
   </link>
   <joint
@@ -256,6 +268,10 @@
         <mesh
           filename="package://tetrabot/meshes/leg3_joint3.STL" />
       </geometry>
+      <lateral_friction value="1000.0"/>
+      <rolling_friction value="0.0"/>
+      <stiffness value="30000"/>
+      <damping value="1000"/>
     </collision>
   </link>
   <joint
@@ -314,6 +330,10 @@
         <mesh
           filename="package://tetrabot/meshes/leg4_joint0.STL" />
       </geometry>
+      <lateral_friction value="1000.0"/>
+      <rolling_friction value="0.0"/>
+      <stiffness value="30000"/>
+      <damping value="1000"/>
     </collision>
   </link>
   <joint
@@ -372,6 +392,10 @@
         <mesh
           filename="package://tetrabot/meshes/leg4_joint1.STL" />
       </geometry>
+      <lateral_friction value="1000.0"/>
+      <rolling_friction value="0.0"/>
+      <stiffness value="30000"/>
+      <damping value="1000"/>
     </collision>
   </link>
   <joint
@@ -430,6 +454,10 @@
         <mesh
           filename="package://tetrabot/meshes/leg4_joint2.STL" />
       </geometry>
+      <lateral_friction value="1000.0"/>
+      <rolling_friction value="0.0"/>
+      <stiffness value="30000"/>
+      <damping value="1000"/>
     </collision>
   </link>
   <joint
@@ -488,6 +516,10 @@
         <mesh
           filename="package://tetrabot/meshes/leg4_joint3.STL" />
       </geometry>
+      <lateral_friction value="1000.0"/>
+      <rolling_friction value="0.0"/>
+      <stiffness value="30000"/>
+      <damping value="1000"/>
     </collision>
   </link>
   <joint
@@ -546,6 +578,10 @@
         <mesh
           filename="package://tetrabot/meshes/leg2_joint0.STL" />
       </geometry>
+      <lateral_friction value="1000.0"/>
+      <rolling_friction value="0.0"/>
+      <stiffness value="30000"/>
+      <damping value="1000"/>
     </collision>
   </link>
   <joint
@@ -604,6 +640,10 @@
         <mesh
           filename="package://tetrabot/meshes/leg2_joint1.STL" />
       </geometry>
+      <lateral_friction value="1000.0"/>
+      <rolling_friction value="0.0"/>
+      <stiffness value="30000"/>
+      <damping value="1000"/>
     </collision>
   </link>
   <joint
@@ -662,6 +702,10 @@
         <mesh
           filename="package://tetrabot/meshes/leg2_joint2.STL" />
       </geometry>
+      <lateral_friction value="1000.0"/>
+      <rolling_friction value="0.0"/>
+      <stiffness value="30000"/>
+      <damping value="1000"/>
     </collision>
   </link>
   <joint
@@ -720,6 +764,10 @@
         <mesh
           filename="package://tetrabot/meshes/leg2_joint3.STL" />
       </geometry>
+      <lateral_friction value="1000.0"/>
+      <rolling_friction value="0.0"/>
+      <stiffness value="30000"/>
+      <damping value="1000"/>
     </collision>
   </link>
   <joint
@@ -778,6 +826,10 @@
         <mesh
           filename="package://tetrabot/meshes/leg1_joint0.STL" />
       </geometry>
+      <lateral_friction value="1000.0"/>
+      <rolling_friction value="0.0"/>
+      <stiffness value="30000"/>
+      <damping value="1000"/>
     </collision>
   </link>
   <joint
@@ -836,6 +888,10 @@
         <mesh
           filename="package://tetrabot/meshes/leg1_joint1.STL" />
       </geometry>
+      <lateral_friction value="1000.0"/>
+      <rolling_friction value="0.0"/>
+      <stiffness value="30000"/>
+      <damping value="1000"/>
     </collision>
   </link>
   <joint
@@ -894,6 +950,10 @@
         <mesh
           filename="package://tetrabot/meshes/leg1_joint2.STL" />
       </geometry>
+      <lateral_friction value="1000.0"/>
+      <rolling_friction value="0.0"/>
+      <stiffness value="30000"/>
+      <damping value="1000"/>
     </collision>
   </link>
   <joint
@@ -952,6 +1012,10 @@
         <mesh
           filename="package://tetrabot/meshes/leg1_joint3.STL" />
       </geometry>
+      <lateral_friction value="1000.0"/>
+      <rolling_friction value="0.0"/>
+      <stiffness value="30000"/>
+      <damping value="1000"/>
     </collision>
   </link>
   <joint
